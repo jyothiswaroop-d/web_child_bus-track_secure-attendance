@@ -1,0 +1,96 @@
+### Update Bus Location
+POST http://localhost:5000/api/buses/update-location
+Content-Type: application/json
+
+{
+  "busId": "55", 
+  "latitude": 16.4859,
+  "longitude": 80.6866
+}
+
+
+###
+POST http://localhost:5000/api/buses/update-location
+Content-Type: application/json
+
+{
+  "busId": "55", 
+  "latitude": 16.4873,
+  "longitude": 80.6989
+}
+
+
+
+
+###
+POST http://localhost:5000/api/buses/initialize-route
+Content-Type: application/json
+
+{
+  "_id": "68fb352b8296af1731b8ef1b",
+  "busId": "55",
+  "bus_no": "BUS-55",
+  "latitude": 16.510661,
+  "longitude": 80.706788,
+  "currentSession": "Morning",
+  "routes": [
+    {
+      "routeType": "morning",
+      "start_point": { "name": "💯 Feet Road", "lat": 16.510661, "lng": 80.706788 },
+      "destination_point": { "name": "School", "lat": 16.488562, "lng": 80.679196 },
+      "stops": [
+        { "name": "ION Digital Zone", "lat": 16.4873, "lng": 80.6989 },
+        { "name": "Kamayyathopu", "lat": 16.4859, "lng": 80.6866 }
+        
+      ]
+    },
+    {
+      "routeType": "evening",
+      "start_point": { "name": "School", "lat": 16.4873, "lng": 80.6989 },
+      "destination_point": { "name": "💯 Feet Road", "lat": 16.4861, "lng": 80.6804 },
+      "stops": [
+         { "name": "Kamayyathopu", "lat": 16.4859, "lng": 80.6866 },
+        { "name": "ION Digital Zone", "lat": 16.4873, "lng": 80.6989 }
+      ]
+    }
+  ]
+}
+
+
+###
+PUT http://localhost:5000/api/buses/session/55
+Content-Type: application/json
+
+{
+  "currentSession": "Evening"
+}
+
+
+
+
+
+
+
+
+### Initialize Bus with Stops
+POST http://localhost:5000/api/buses/initialize-route
+Content-Type: application/json
+{
+  "busId": "55",
+  "bus_no": "BUS-55",
+  "latitude": 16.431234,
+  "longitude": 80.579567,
+  "stops": [
+    { "name": "Main Gate", "lat": 16.430, "lng": 80.578, "radius": 50 },
+    { "name": "Library Area", "lat": 16.432, "lng": 80.579, "radius": 50 },
+    { "name": "School Gate", "lat": 16.435, "lng": 80.580, "radius": 50 }
+  ]
+}
+
+
+
+
+
+ 
+### Get Latest Bus Location
+GET http://localhost:5000/api/buses

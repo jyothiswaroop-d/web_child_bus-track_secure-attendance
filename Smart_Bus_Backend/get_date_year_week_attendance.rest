@@ -1,0 +1,11 @@
+GET http://192.168.1.3:5000/api/attendance/student/550101?date=2025-10-26
+```
+
+### 2. **Monthly Stats for 550102:**
+
+GET http://192.168.1.3:5000/api/attendance/student/550102/stats?year=2025&month=10
+
+
+### 3. **Weekly Stats for 550102:**
+
+GET http://192.168.1.3:5000/api/attendance/student/550102/weekly?weekStart=2025-10-20

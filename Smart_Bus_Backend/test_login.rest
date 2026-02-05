@@ -1,0 +1,25 @@
+POST http://localhost:5000/api/students/login
+Content-Type: application/json
+
+{
+  "stu_id": "550101"
+}
+
+### 
+POST http://192.168.1.9:5000/api/students/login
+Content-Type: application/json
+
+{
+  "stu_id": "550101"
+}
+
+###
+POST http://localhost:5000/api/students/login
+Content-Type: application/json
+
+{
+  "stu_id": "550101"
+}
+
+### Get student by ID
+GET http://localhost:5000/api/students/550115

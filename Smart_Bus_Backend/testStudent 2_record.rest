@@ -1,0 +1,24 @@
+POST http://localhost:5000/api/students
+Content-Type: application/json
+
+
+  {
+    "stu_id": "550104",
+    "nfcId": "5C 13 9D 92",
+    "stu_name": "Vinay Kumar",
+    "gender": "Male",
+    "parent_name": "Ravi Kumar",
+    "parents_phone_number": "8519813814",
+    "class_section": "9-B",
+    "bus_no": "55",
+    "is_bus_student": true,
+    "notificationsEnabled": true,
+    "address": "4, Adithya Sai Nagar Rd, Kamayyathopu, Chalasani Nagar, Kanuru, Vijayawada",
+    "bus_stop_address": "Kamayyathopu, Chalasani Nagar, Ashok Nagar, Vijayawada",
+    "transport_fee": 14500
+  }
+
+
+### Get student by ID
+GET http://localhost:5000/api/students/550115
+

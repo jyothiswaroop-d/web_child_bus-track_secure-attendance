@@ -1,0 +1,15 @@
+### Add a new admin
+POST http://localhost:5000/api/admin/add
+Content-Type: application/json
+
+{
+  "name": "Jyothi Swaroop",
+  "designation": "System Admin",
+  "user_name": "jswaroop",
+  "dob": "2000-05-12",
+  "work_experience": 4
+}
+
+
+### Get all admins
+GET http://localhost:5000/api/admin/jswaroop

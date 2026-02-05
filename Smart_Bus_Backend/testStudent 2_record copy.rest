@@ -1,0 +1,105 @@
+###
+PATCH http://10.0.117.35:5000/api/students/550101/notifications
+Content-Type: application/json
+
+{
+  "notificationsEnabled": false
+}
+
+
+
+
+###
+POST http://localhost:5000/api/students/bulk
+Content-Type: application/json
+
+[
+  {
+    "stu_id": "550106",
+    "nfcId": "02 94 EF 51 A7",
+    "stu_name": "Prudhvi Raj",
+    "gender": "Male",
+    "parent_name": "Prakash Raj",
+    "parents_phone_number": "7997194021",
+    "class_section": "7-A",
+    "bus_no": "55",
+    "is_bus_student": true,
+    "notificationsEnabled": true,
+    "address": "Poranki Market Lane, Poranki",
+    "bus_stop_address": "Tadigadapa Main Street, Vijayawada",
+    "transport_fee": 15500
+  },
+  {
+    "stu_id": "550107",
+    "nfcId": "04 51 BC 3D 9E",
+    "stu_name": "Harlod Das",
+    "gender": "Male",
+    "parent_name": "Ramesh Das",
+    "parents_phone_number": "6305444766",
+    "class_section": "10-B",
+    "bus_no": "55",
+    "is_bus_student": true,
+    "notificationsEnabled": true,
+    "address": "Sri Sai Residency, Penamaluru",
+    "bus_stop_address": "Near Bandaru Road, Tadigadapa, Vijayawada",
+    "transport_fee": 17000
+  },
+  {
+    "stu_id": "550117",
+    "nfcId": "02 4C 6A 3B D9",
+    "stu_name": "Rashmika D",
+    "gender": "Female",
+    "parent_name": "Padma V",
+    "parents_phone_number": "9000000017",
+    "class_section": "9-C",
+    "bus_no": "77",
+    "is_bus_student": true,
+    "notificationsEnabled": true,
+    "address": "Benz Circle",
+    "bus_stop_address": "Eenadu Bus Stop",
+    "transport_fee": 12500
+  },
+  {
+    "stu_id": "550118",
+    "nfcId": "05 EF 93 47 21",
+    "stu_name": "Sandhya N",
+    "gender": "Female",
+    "parent_name": "Nirmala N",
+    "parents_phone_number": "9000000018",
+    "class_section": "10-B",
+    "bus_no": "77",
+    "is_bus_student": true,
+    "notificationsEnabled": true,
+    "address": "Autonagar",
+    "bus_stop_address": "Auto Nagar Gate",
+    "transport_fee": 17500
+  },
+  {
+    "stu_id": "550119",
+    "nfcId": "01 B7 D6 3C EA",
+    "stu_name": "Bhavana L",
+    "gender": "Female",
+    "parent_name": "Neelima L",
+    "parents_phone_number": "9000000019",
+    "class_section": "9-A",
+    "bus_no": "66",
+    "is_bus_student": true,
+    "notificationsEnabled": true,
+    "address": "Bhavanipuram",
+    "bus_stop_address": "Muncipality Office",
+    "transport_fee": 16000
+  }
+]
+
+
+
+### Get student by ID
+GET http://localhost:5000/api/students/550115
+
+
+
+
+
+### Get student by ID
+GET http://localhost:5000/api/students/550115
+

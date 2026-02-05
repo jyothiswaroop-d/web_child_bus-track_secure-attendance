@@ -1,0 +1,62 @@
+OLD Attendance AttendancePage
+
+const attendanceData = [
+  { date: '2024-01-15', status: 'Present', boardingTime: '08:15 AM', dropTime: '03:30 PM' },
+  { date: '2024-01-14', status: 'Present', boardingTime: '08:12 AM', dropTime: '03:35 PM' },
+  { date: '2024-01-13', status: 'Absent', boardingTime: '-', dropTime: '-' },
+  { date: '2024-01-12', status: 'Present', boardingTime: '08:18 AM', dropTime: '03:28 PM' },
+  { date: '2024-01-11', status: 'Present', boardingTime: '08:10 AM', dropTime: '03:32 PM' },
+]
+
+function AttendancePage() {
+  return (
+    <div>
+      {/* Statistics Cards */}
+      <div className="stats-grid">
+        <div className="stat-card">
+          <div className="stat-icon">📅</div>
+          <div style={{ fontSize: '14px', color: '#666' }}>This Month</div>
+          <div style={{ fontWeight: 'bold', fontSize: '18px', margin: '8px 0' }}>18/20 Days</div>
+          <div style={{ fontWeight: 'bold', fontSize: '20px', color: '#4CAF50' }}>90%</div>
+        </div>
+
+        <div className="stat-card">
+          <div className="stat-icon">📆</div>
+          <div style={{ fontSize: '14px', color: '#666' }}>This Week</div>
+          <div style={{ fontWeight: 'bold', fontSize: '18px', margin: '8px 0' }}>4/5 Days</div>
+          <div style={{ fontWeight: 'bold', fontSize: '20px', color: '#2196F3' }}>80%</div>
+        </div>
+      </div>
+
+      {/* Recent Attendance Title */}
+      <h3 style={{ fontWeight: 'bold', fontSize: '18px', marginBottom: '16px' }}>
+        Recent Attendance
+      </h3>
+
+      {/* Attendance List */}
+      <div className="attendance-list">
+        {attendanceData.map((record, index) => (
+          <div key={index} className="attendance-item">
+            <div className={`status-badge ${record.status.toLowerCase()}`}>
+              {record.status === 'Present' ? '✓' : '✗'}
+            </div>
+
+            <div style={{ flex: 1 }}>
+              <div style={{ fontWeight: 'bold', fontSize: '16px' }}>{record.date}</div>
+              <div style={{ color: '#666', fontSize: '14px' }}>{record.status}</div>
+            </div>
+
+            {record.status === 'Present' && (
+              <div style={{ textAlign: 'right', fontSize: '12px', color: '#666' }}>
+                <div>In: {record.boardingTime}</div>
+                <div>Out: {record.dropTime}</div>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export default AttendancePage

@@ -1,0 +1,36 @@
+# E2 37 D4 34
+POST http://localhost:5000/api/attendance/nfc
+Content-Type: application/json
+
+{
+  "nfcId": "E2 37 D4 34",
+  "bus": "55",
+  "status": "Present"
+}
+
+### Test attendance along with Notification
+POST http://localhost:5000/api/attendance/nfc
+Content-Type: application/json
+
+{
+  "nfcId": "8E 78 0B 01",
+  "bus": "55",
+  "status": "Present"
+}
+
+###
+POST http://localhost:5000/api/attendance/nfc
+Content-Type: application/json
+
+{
+  "nfcId": "5C 13 9D 92",
+  "bus": "55",
+  "status": "Present"
+}
+
+
+### 2. Get all attendance records
+GET http://localhost:5000/api/attendance
+
+### 3. Get attendance by studentId
+GET http://localhost:5000/api/attendance/550101
